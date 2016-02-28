@@ -7,7 +7,7 @@ You're given an array of CSV strings representing search results. Results are so
 import java.io.*;
 import java.util.*;
 
-class Solution {
+class uniqueHost {
   public static void main(String[] args) {
     
     int PER_PAGE = 5;
