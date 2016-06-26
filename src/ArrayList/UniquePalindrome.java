@@ -1,4 +1,4 @@
-package src;
+package src.ArrayList;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

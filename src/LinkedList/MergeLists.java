@@ -1,4 +1,4 @@
-package src;
+package src.LinkedList;
 
 /**
  * Created by liyangzhang on 2016-06-25.
