@@ -1,4 +1,4 @@
-package src.LinkedList;
+package LinkedList;
 
 /**
  *

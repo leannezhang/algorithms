@@ -1,11 +1,11 @@
-package src.ArrayList;
+package ArrayList;
 /*Problem
 You're given an array of CSV strings representing search results. Results are sorted by a score initially. A given host may have several listings that show up in these results. Suppose we want to show 12 results per page, but we don't want the same host to dominate the results. Write a function that will reorder the list so that a host shows up at most once on a page if possible, but otherwise preserves the ordering. Your program should return the new array and print out the results in blocks representing the pages.
 */
 
   
-import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
 
 class uniqueHost {
   public static void main(String[] args) {

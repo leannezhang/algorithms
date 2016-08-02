@@ -1,4 +1,4 @@
-package src.codeReview;
+package codeReview;
 
 /**
  * Created by liyangzhang on 2016-06-04.
@@ -11,7 +11,6 @@ package src.codeReview;
  * @version 6/4/2016
  */
 import java.util.Scanner;
-import java.math.*;
 
 public class Calculator
 {

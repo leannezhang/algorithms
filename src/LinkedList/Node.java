@@ -1,4 +1,4 @@
-package src.LinkedList;
+package LinkedList;
 
 /**
  * Created by liyangzhang on 2016-06-26.
@@ -84,5 +84,48 @@ public class Node {
         }
         return header;
     }
+
+    public Node deleteNode(Node root, int num) {
+
+        Node head = root;
+
+        if (root.data == num) {
+            return head.next;
+        }
+
+        while (root.next != null) {
+            if (root.next.data == num) {
+                root.next = root.next.next;
+                return head;
+            }
+            root = root.next;
+        }
+
+        return root;
+    }
+
+    /**
+     * This question tests your skills in keeping track of pointers.
+     *
+     * The key is make sure that when you swap nodes
+     * the original linkage should be destroyed as well.
+     *
+     * The easiest solution is used to recursion and a dummy node.
+     *
+     * @param head
+     * @return
+     */
+    public Node swapPairs(Node head) {
+        if(head == null || head.next == null) {
+            return head;
+        }
+        Node dummy = new Node(head.data, null);
+        head = head.next;
+        Node nextnextNode = swapPairs(head.next);
+        head.next = dummy;
+        dummy.next = nextnextNode;
+        return head;
+    }
+
 
 }

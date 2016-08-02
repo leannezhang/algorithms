@@ -1,4 +1,4 @@
-package src.LinkedList;
+package LinkedList;
 
 /**
  * Created by liyangzhang on 2016-06-25.
@@ -86,19 +86,46 @@ public class MergeLists {
         head.next = n;
         return header;
     }
+    public static Node InsertNth(Node head, int data, int position) {
+        Node newNode = new Node();
+        Node header = head;
 
+        // scenario when head is null
+        if ( head == null) {
+            newNode.data = data;
+            return newNode;
+        }
+
+        newNode.data = data;
+        // scenario when we want to insert in the first element on the list
+        if (position == 0) {
+            newNode.next = head;
+            header = newNode;
+            return header;
+        }
+
+        // insert somewhere else
+        // should stop the element before the position to keep track of next element and assign new element
+        for (int i=1; i < position && head.next !=null; i++) {
+            head = head.next;
+        }
+        if (head.next != null) {
+            newNode.next =  head.next;
+            head.next = newNode;
+        } else {
+            head.next = newNode;
+        }
+        return header;
+    }
     public static void main(String[] args) {
         Node headA = new Node();
         headA.data = 1;
-        headA.next = new Node(3, null);
-        headA.next.next = new Node(5, null);
+        headA.next = new Node(2, null);
+//        headA.next.next = new Node(3, null);
 
-        Node headB = new Node(2, null);
-        headB.next = new Node(4, null);
-        headB.next.next = new Node(7, null);
-
-        Node mergedList = MergeLists(headA, headB);
-        printLinkedList(mergedList);
+        //Node head = InsertNth(headA, 2, 1);
+        //Node head = deleteNode(headA, 1);
+        printLinkedList(headA);
     }
 
 

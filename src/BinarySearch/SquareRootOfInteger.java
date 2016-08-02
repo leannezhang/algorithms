@@ -1,4 +1,4 @@
-package src.BinarySearch;
+package BinarySearch;
 
 /**
  * Should consider integer overflow..

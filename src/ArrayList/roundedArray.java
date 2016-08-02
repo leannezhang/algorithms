@@ -1,4 +1,4 @@
-package src.ArrayList;
+package ArrayList;
 
 /**
  *

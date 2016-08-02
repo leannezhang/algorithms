@@ -1,4 +1,4 @@
-package src.HashMap;
+package HashMap;
 
 import java.io.IOException;
 import java.util.*;

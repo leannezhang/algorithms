@@ -1,4 +1,4 @@
-package src.ArrayList;
+package ArrayList;
 
 import java.util.HashSet;
 import java.util.Scanner;
