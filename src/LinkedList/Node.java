@@ -127,5 +127,30 @@ public class Node {
         return head;
     }
 
+    public Node swapPairsIteratively(Node head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        Node p1 = head;
+        Node p2 = p1.next;
+        Node temp = p2.next;
+        head = p2;
+        while (p1 != null && p2 != null) {
+            p2.next = p1;
+            p1.next = temp;
+            p1 = temp;
+            if (p1 != null) {
+                if (p1.next != null) {
+                    p2.next.next = p1.next;
+                }
+                p2 = p1.next;
+            }
+            if (p2 != null) {
+                temp = p2.next;
+            }
+        }
+        return head;
+    }
+
 
 }
