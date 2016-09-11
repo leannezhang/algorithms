@@ -27,8 +27,9 @@
 - Identify the base case. What is the false case? What's the true case?
 - Generic case: Assume that the recursive function works, how can I solve the subset using the recursion method I created?
 
-![Image of Symmetric Tree Recursively]
-(https://github.com/leannezhang/algorithms/tree/master/src/Tree/images/SymmetricTree.png)
+
+![Image of Symmetric Tree][Symmetric1]
+[Symmetric1]: https://github.com/leannezhang/algorithms/blob/master/src/Tree/images/SymmetricTree.png "Recursive"
 
 ```java
 
