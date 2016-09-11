@@ -1,4 +1,4 @@
-package codeReview;
+package CodeReview;
 
 /**
  * Created by liyangzhang on 2016-06-04.
