@@ -36,9 +36,9 @@ function validate(employees, schema) {
  for (let employee of employees) {
     const rules = schema?.employee|| [];
     
-    const unexpctedProperty = containsUnexpectedProperty(rules, employee);
-    if (unexpctedProperty) {
-      return writeResultMessage(false,`unexpected property ${unexpctedProperty}`);
+    const unexpectedProperty = containsUnexpectedProperty(rules, employee);
+    if (unexpectedProperty) {
+      return writeResultMessage(false,`unexpected property ${unexpectedProperty}`);
     }
 
     for( let rule of rules) {
