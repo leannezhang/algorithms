@@ -10,17 +10,7 @@
 * string, number, boolean, and array:employee
 */
  
-// const schema = {
-//    employee: [
-//        {name: 'name', required: true, type: 'string'},
-//        {name: 'title', required: true, type: 'string'},
-//        {name: 'salary', required: true, type: 'number'},
-//        {name: 'remote', required: false, type: 'boolean'},
-//        {name: 'reports', required: false, type: 'array:employee'},
-//        {name: 'subordinates', required: false, type: 'array:employee'},
-//    ]
-// };
- 
+
 let resultMessage = { ok: false, message: "" };
 let schemaKeys = {};
 
@@ -80,13 +70,14 @@ function validate(employees, schema) {
  return writeResultMessage(true, 'success');
 }
  
- 
+// Main function
 function main(inputString) {
    const {employees, schema} = JSON.parse(inputString);
    const result = validate(employees, schema);
    console.log(result)
 }
 
+// Test Data
 const employees = `[{
       "name": "Alice",
       "title": "ceo",
